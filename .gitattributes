@@ -1,6 +1,0 @@
-# Auto detect text files and perform LF normalization
-* text=auto
-final_data.csv filter=lfs diff=lfs merge=lfs -text
-forecast_weather.csv filter=lfs diff=lfs merge=lfs -text
-historical_weather.csv filter=lfs diff=lfs merge=lfs -text
-merged_data.csv filter=lfs diff=lfs merge=lfs -text
