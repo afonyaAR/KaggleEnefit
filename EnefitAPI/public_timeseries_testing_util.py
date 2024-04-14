@@ -23,14 +23,14 @@ class MockApi:
             export_group_id_column: if true, the dataframes iter_test serves will include the group_id_column values.
         '''
         self.input_paths: Sequence[str] = [
-            "/kaggle/input/predict-energy-behavior-of-prosumers/example_test_files/test.csv", # df_test
-            "/kaggle/input/predict-energy-behavior-of-prosumers/example_test_files/revealed_targets.csv", # df_new_target
-            "/kaggle/input/predict-energy-behavior-of-prosumers/example_test_files/client.csv",
-            "/kaggle/input/predict-energy-behavior-of-prosumers/example_test_files/historical_weather.csv",
-            "/kaggle/input/predict-energy-behavior-of-prosumers/example_test_files/forecast_weather.csv",
-            "/kaggle/input/predict-energy-behavior-of-prosumers/example_test_files/electricity_prices.csv",
-            "/kaggle/input/predict-energy-behavior-of-prosumers/example_test_files/gas_prices.csv", 
-            "/kaggle/input/predict-energy-behavior-of-prosumers/example_test_files/sample_submission.csv" # df_sample_prediction
+            "C:/Users/azare/Documents/GitHub/KaggleEnefit/EnefitAPI/example_test_files/test.csv", # df_test
+            "C:/Users/azare/Documents/GitHub/KaggleEnefit/EnefitAPI/example_test_files/revealed_targets.csv", # df_new_target
+            "C:/Users/azare/Documents/GitHub/KaggleEnefit/EnefitAPI/example_test_files/client.csv",
+            "C:/Users/azare/Documents/GitHub/KaggleEnefit/EnefitAPI/example_test_files/historical_weather.csv",
+            "C:/Users/azare/Documents/GitHub/KaggleEnefit/EnefitAPI/example_test_files/forecast_weather.csv",
+            "C:/Users/azare/Documents/GitHub/KaggleEnefit/EnefitAPI/example_test_files/electricity_prices.csv",
+            "C:/Users/azare/Documents/GitHub/KaggleEnefit/EnefitAPI/example_test_files/gas_prices.csv", 
+            "C:/Users/azare/Documents/GitHub/KaggleEnefit/EnefitAPI/example_test_files/sample_submission.csv" # df_sample_prediction
         ]
         self.group_id_column: str = "data_block_id"
         self.export_group_id_column: bool = True
@@ -72,7 +72,7 @@ class MockApi:
                 print('You must call `predict()` successfully before you can continue with `iter_test()`', flush=True)
                 yield None
 
-        with open('/kaggle/working/submission.csv', 'w') as f_open:
+        with open('C:/Users/azare/Documents/GitHub/KaggleEnefit/working/submission.csv', 'w') as f_open:
             pd.concat(self.predictions).to_csv(f_open, index=False)
         self._status = 'finished'
 
